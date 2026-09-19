@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="BigBay Mall delivers premium video editing, motion graphics, and digital media services for creators, businesses, and brands.">
   <meta name="author" content="BigBay Mall">
+  
+  <!-- Open Graph Meta Tags for Social Sharing -->
+  <meta property="og:title" content="BigBay Mall | Video Editing & Digital Media">
+  <meta property="og:description" content="Professional video editing, color grading, and custom templates for creators, businesses, and brands.">
+  <meta property="og:image" content="https://bigbaymall.com/assets/images/banner-right-image.png">
+  <meta property="og:url" content="https://bigbaymall.com">
+  <meta property="og:type" content="website">
+  
   <title>BigBay Mall | Video Editing &amp; Digital Media</title>
   
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -17,12 +25,15 @@
 
   <style>
     /* ============================================
-       1. KILL HERO IMAGE DUPLICATION (NUKE MODE)
+       1. KILL HERO IMAGE DUPLICATION (AGGRESSIVE)
        ============================================ */
     .main-banner .right-image,
-    .main-banner .right-image * {
+    .main-banner .right-image *,
+    .main-banner .right-image::before,
+    .main-banner .right-image::after {
       background-image: none !important;
       background: none !important;
+      background-color: transparent !important;
     }
     .main-banner .right-image::before,
     .main-banner .right-image::after {
@@ -37,11 +48,13 @@
       height: auto !important;
       background: transparent !important;
       box-shadow: none !important;
+      border: none !important;
     }
-    /* Kill any owl-carousel cloning artifacts on the right image */
+    /* Kill owl-carousel clones */
     .main-banner .right-image .cloned,
     .main-banner .right-image .owl-item:not(.active) {
       display: none !important;
+      visibility: hidden !important;
     }
 
     /* ============================================
@@ -50,7 +63,7 @@
     @media (max-width: 991px) {
       .main-banner { padding-top: 100px !important; padding-bottom: 40px !important; }
       .main-banner .item { text-align: center; padding-top: 0 !important; }
-      .main-banner .item h2 { font-size: 28px !important; line-height: 1.3 !important; }
+      .main-banner .item h1 { font-size: 28px !important; line-height: 1.3 !important; }
       .main-banner .item p { font-size: 15px !important; margin-bottom: 20px !important; }
       .main-banner .down-buttons { justify-content: center; }
       .main-banner .right-image { margin-top: 30px; text-align: center; }
@@ -58,7 +71,38 @@
     }
 
     /* ============================================
-       3. CONTACT FORM CARD
+       3. UNIFIED BUTTON COLORS (ALL CORAL #ff695f)
+       ============================================ */
+    .main-blue-button-hover a,
+    .main-red-button-hover a,
+    #lead-form button[type="submit"] {
+      background-color: #ff695f !important;
+      color: #fff !important;
+      border: none !important;
+      border-radius: 23px !important;
+      padding: 12px 30px !important;
+      font-size: 14px !important;
+      font-weight: 600 !important;
+      text-decoration: none !important;
+      transition: all 0.3s ease !important;
+      display: inline-block !important;
+    }
+    .main-blue-button-hover a:hover,
+    .main-red-button-hover a:hover,
+    #lead-form button[type="submit"]:hover {
+      background-color: #e05048 !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 5px 15px rgba(255, 105, 95, 0.4) !important;
+    }
+    #lead-form button[type="submit"] {
+      width: 100% !important;
+      padding: 14px 0 !important;
+      margin-top: 10px !important;
+      cursor: pointer !important;
+    }
+
+    /* ============================================
+       4. CONTACT FORM CARD
        ============================================ */
     .contact-card {
       background-color: #fff;
@@ -70,37 +114,6 @@
     }
     @media (max-width: 991px) {
       .contact-card { padding: 30px 20px; margin-top: 30px; }
-    }
-
-    /* ============================================
-       4. SUBMIT BUTTON - EXACT MATCH TO TEMPLATE CTA
-       ============================================ */
-    #lead-form button[type="submit"] {
-      display: block !important;
-      width: 100% !important;
-      text-align: center !important;
-      font-size: 15px !important;
-      font-weight: 600 !important;
-      color: #fff !important;
-      background-color: #ff695f !important;
-      background: #ff695f !important;
-      border: none !important;
-      border-radius: 23px !important;
-      padding: 14px 0 !important;
-      cursor: pointer !important;
-      font-family: 'Poppins', sans-serif !important;
-      letter-spacing: 0.5px !important;
-      transition: all 0.3s ease !important;
-      margin-top: 10px !important;
-      text-decoration: none !important;
-      line-height: 1.5 !important;
-    }
-    #lead-form button[type="submit"]:hover {
-      background-color: #e05048 !important;
-      background: #e05048 !important;
-      color: #fff !important;
-      transform: translateY(-2px) !important;
-      box-shadow: 0 5px 15px rgba(255, 105, 95, 0.4) !important;
     }
 
     /* ============================================
@@ -132,10 +145,21 @@
       background-color: #fff;
       box-shadow: 0 0 5px rgba(255, 105, 95, 0.3);
     }
+    /* Visually hidden labels for accessibility */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
 
     /* ============================================
-       6. FOOTER LINKS - WHITE DEFAULT, ORANGE HOVER
-       (Matches header menu behavior)
+       6. FOOTER LINKS - GRAY DEFAULT, ORANGE HOVER
        ============================================ */
     footer .footer-item ul {
       padding: 0 !important;
@@ -148,7 +172,7 @@
       list-style: none !important;
     }
     footer .footer-item ul li a {
-      color: #ffffff !important;
+      color: #7a7a7a !important;
       text-decoration: none !important;
       font-size: 14px !important;
       opacity: 1 !important;
@@ -161,7 +185,7 @@
     }
 
     /* ============================================
-       7. SOCIAL ICONS - HORIZONTAL
+       7. SOCIAL ICONS - GRAY DEFAULT, ORANGE HOVER
        ============================================ */
     footer .about.footer-item > ul {
       display: flex !important;
@@ -181,9 +205,9 @@
       justify-content: center !important;
       width: 38px !important;
       height: 38px !important;
-      background-color: rgba(255,255,255,0.1) !important;
+      background-color: rgba(122, 122, 122, 0.1) !important;
       border-radius: 50% !important;
-      color: #fff !important;
+      color: #7a7a7a !important;
       font-size: 16px !important;
       transition: all 0.3s ease !important;
     }
@@ -241,7 +265,7 @@
               <div class="owl-carousel owl-banner">
                 <div class="item header-text">
                   <h6>Welcome to BigBay Mall</h6>
-                  <h2>Professional Video Editing &amp; <em>Premium Templates</em></h2>
+                  <h1>Professional Video Editing &amp; <em>Premium Templates</em></h1>
                   <p>High-quality video editing, color grading, and custom templates for creators, businesses, and brands. Fast turnaround, professional results.</p>
                   <div class="down-buttons">
                     <div class="main-blue-button-hover"><a href="#contact">Contact Us Now</a></div>
@@ -291,14 +315,14 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="owl-carousel owl-services">
-            <div class="item"><h4>Short-Form Content</h4><div class="icon"><img src="assets/images/service-icon-01.png" alt=""></div><p>Engaging edits for TikTok, Reels, and YouTube Shorts designed to maximize retention.</p></div>
-            <div class="item"><h4>Long-Form Editing</h4><div class="icon"><img src="assets/images/service-icon-02.png" alt=""></div><p>Professional cuts, pacing, and storytelling for YouTube videos, podcasts, and corporate presentations.</p></div>
-            <div class="item"><h4>Color &amp; Sound Design</h4><div class="icon"><img src="assets/images/service-icon-03.png" alt=""></div><p>Cinematic color grading and clean audio mixing to make your footage look and sound professional.</p></div>
-            <div class="item"><h4>Custom Templates</h4><div class="icon"><img src="assets/images/service-icon-04.png" alt=""></div><p>Drag-and-drop Premiere Pro and DaVinci Resolve templates to speed up your workflow.</p></div>
-            <div class="item"><h4>Motion Graphics</h4><div class="icon"><img src="assets/images/service-icon-01.png" alt=""></div><p>Lower thirds, intro animations, and dynamic text to elevate your production value.</p></div>
-            <div class="item"><h4>Fast Turnaround</h4><div class="icon"><img src="assets/images/service-icon-02.png" alt=""></div><p>Reliable delivery times so you never miss your content publishing schedule.</p></div>
-            <div class="item"><h4>Brand Storytelling</h4><div class="icon"><img src="assets/images/service-icon-03.png" alt=""></div><p>We shape your footage into a clear message that connects with your target audience.</p></div>
-            <div class="item"><h4>Platform Optimization</h4><div class="icon"><img src="assets/images/service-icon-04.png" alt=""></div><p>Content formatted for TikTok, Instagram, YouTube, and other channels to maximize reach.</p></div>
+            <div class="item"><h4>Short-Form Content</h4><div class="icon"><img src="assets/images/service-icon-01.png" alt="Short-Form Content"></div><p>Engaging edits for TikTok, Reels, and YouTube Shorts designed to maximize retention.</p></div>
+            <div class="item"><h4>Long-Form Editing</h4><div class="icon"><img src="assets/images/service-icon-02.png" alt="Long-Form Editing"></div><p>Professional cuts, pacing, and storytelling for YouTube videos, podcasts, and corporate presentations.</p></div>
+            <div class="item"><h4>Color &amp; Sound Design</h4><div class="icon"><img src="assets/images/service-icon-03.png" alt="Color and Sound Design"></div><p>Cinematic color grading and clean audio mixing to make your footage look and sound professional.</p></div>
+            <div class="item"><h4>Custom Templates</h4><div class="icon"><img src="assets/images/service-icon-04.png" alt="Custom Templates"></div><p>Drag-and-drop Premiere Pro and DaVinci Resolve templates to speed up your workflow.</p></div>
+            <div class="item"><h4>Motion Graphics</h4><div class="icon"><img src="assets/images/service-icon-01.png" alt="Motion Graphics"></div><p>Lower thirds, intro animations, and dynamic text to elevate your production value.</p></div>
+            <div class="item"><h4>Fast Turnaround</h4><div class="icon"><img src="assets/images/service-icon-02.png" alt="Fast Turnaround"></div><p>Reliable delivery times so you never miss your content publishing schedule.</p></div>
+            <div class="item"><h4>Brand Storytelling</h4><div class="icon"><img src="assets/images/service-icon-03.png" alt="Brand Storytelling"></div><p>We shape your footage into a clear message that connects with your target audience.</p></div>
+            <div class="item"><h4>Platform Optimization</h4><div class="icon"><img src="assets/images/service-icon-04.png" alt="Platform Optimization"></div><p>Content formatted for TikTok, Instagram, YouTube, and other channels to maximize reach.</p></div>
           </div>
         </div>
       </div>
@@ -369,11 +393,11 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="owl-carousel owl-portfolio">
-            <div class="item"><div class="thumb"><img src="assets/images/portfolio-01.jpg" alt=""><div class="hover-effect"><div class="inner-content"><a href="#"><h4>Tech Review Edit</h4></a><span>Product Launch Content</span></div></div></div></div>
-            <div class="item"><div class="thumb"><img src="assets/images/portfolio-02.jpg" alt=""><div class="hover-effect"><div class="inner-content"><a href="#"><h4>Real Estate Walkthrough Video</h4></a><span>Property Marketing</span></div></div></div></div>
-            <div class="item"><div class="thumb"><img src="assets/images/portfolio-03.jpg" alt=""><div class="hover-effect"><div class="inner-content"><a href="#"><h4>TikTok Ad Campaign</h4></a><span>Short-Form Social Media</span></div></div></div></div>
-            <div class="item"><div class="thumb"><img src="assets/images/portfolio-04.jpg" alt=""><div class="hover-effect"><div class="inner-content"><a href="#"><h4>Podcast Multi-Cam Edit</h4></a><span>Interview Production</span></div></div></div></div>
-            <div class="item"><div class="thumb"><img src="assets/images/portfolio-01.jpg" alt=""><div class="hover-effect"><div class="inner-content"><a href="#"><h4>Corporate Training Module</h4></a><span>Internal Education</span></div></div></div></div>
+            <div class="item"><div class="thumb"><img src="assets/images/portfolio-01.jpg" alt="Tech Review Edit - Product Launch Content"><div class="hover-effect"><div class="inner-content"><a href="#"><h4>Tech Review Edit</h4></a><span>Product Launch Content</span></div></div></div></div>
+            <div class="item"><div class="thumb"><img src="assets/images/portfolio-02.jpg" alt="Real Estate Walkthrough Video - Property Marketing"><div class="hover-effect"><div class="inner-content"><a href="#"><h4>Real Estate Walkthrough Video</h4></a><span>Property Marketing</span></div></div></div></div>
+            <div class="item"><div class="thumb"><img src="assets/images/portfolio-03.jpg" alt="TikTok Ad Campaign - Short-Form Social Media"><div class="hover-effect"><div class="inner-content"><a href="#"><h4>TikTok Ad Campaign</h4></a><span>Short-Form Social Media</span></div></div></div></div>
+            <div class="item"><div class="thumb"><img src="assets/images/portfolio-04.jpg" alt="Podcast Multi-Cam Edit - Interview Production"><div class="hover-effect"><div class="inner-content"><a href="#"><h4>Podcast Multi-Cam Edit</h4></a><span>Interview Production</span></div></div></div></div>
+            <div class="item"><div class="thumb"><img src="assets/images/portfolio-01.jpg" alt="Corporate Training Module - Internal Education"><div class="hover-effect"><div class="inner-content"><a href="#"><h4>Corporate Training Module</h4></a><span>Internal Education</span></div></div></div></div>
           </div>
         </div>
       </div>
@@ -435,10 +459,29 @@
               <input type="hidden" name="_next" value="https://bigbaymall.com/">
               <input type="hidden" name="_subject" value="New Video Editing Lead from BigBay Mall">
               <div class="row">
-                <div class="col-12"><fieldset><input type="text" name="name" placeholder="Your Full Name" autocomplete="on" required></fieldset></div>
-                <div class="col-12"><fieldset><input type="email" name="email" placeholder="Your Email Address" required></fieldset></div>
-                <div class="col-12"><fieldset><textarea name="message" rows="4" placeholder="Tell us about your video project (e.g., type of video, length, deadline)" required></textarea></fieldset></div>
-                <div class="col-12"><fieldset><button type="submit">Submit Request</button></fieldset></div>
+                <div class="col-12">
+                  <fieldset>
+                    <label for="name" class="sr-only">Your Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Full Name" autocomplete="on" required>
+                  </fieldset>
+                </div>
+                <div class="col-12">
+                  <fieldset>
+                    <label for="email" class="sr-only">Your Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+                  </fieldset>
+                </div>
+                <div class="col-12">
+                  <fieldset>
+                    <label for="message" class="sr-only">Project Details</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Tell us about your video project (e.g., type of video, length, deadline)" required></textarea>
+                  </fieldset>
+                </div>
+                <div class="col-12">
+                  <fieldset>
+                    <button type="submit">Submit Request</button>
+                  </fieldset>
+                </div>
               </div>
             </form>
           </div>
