@@ -15,9 +15,19 @@
   <link rel="stylesheet" href="assets/css/animated.css">
   <link rel="stylesheet" href="assets/css/owl.css">
 
-  <!-- MASTER FIXES: Layout, Overlap, Mobile Spacing, Footer Visibility -->
+  <!-- MASTER FIXES: Banner duplication, button styling, contact card, footer visibility -->
   <style>
-    /* 1. FIX MOBILE HERO SPACING & ALIGNMENT */
+    /* 1. FIX BANNER IMAGE DUPLICATION */
+    .main-banner .right-image {
+      position: relative;
+      z-index: 10;
+    }
+    .main-banner .right-image img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      background-image: none !important;
+    }
     @media (max-width: 991px) {
       .main-banner { padding-top: 100px !important; padding-bottom: 40px !important; }
       .main-banner .item { text-align: center; padding-top: 0 !important; }
@@ -25,25 +35,23 @@
       .main-banner .item p { font-size: 15px !important; margin-bottom: 20px !important; }
       .main-banner .down-buttons { justify-content: center; }
       .main-banner .right-image { margin-top: 30px; text-align: center; }
-      .main-banner .right-image img { max-width: 80%; height: auto; }
+      .main-banner .right-image img { max-width: 80%; }
     }
 
-    /* 2. PREVENT BANNER IMAGE DUPLICATION */
-    .right-image img {
-      max-width: 100%;
-      height: auto;
-      display: block;
+    /* 2. CONTACT FORM CARD (Matches pricing card style) */
+    .contact-card {
+      background-color: #fff;
+      border-radius: 24px;
+      padding: 40px 30px;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 5;
+    }
+    @media (max-width: 991px) {
+      .contact-card { padding: 30px 20px; margin-top: 30px; }
     }
 
-    /* 3. FIX LAPTOP OVERLAP (Unlimited / 24h) */
-    @media (min-width: 992px) and (max-width: 1199px) {
-      .fact-item .count-digit { font-size: 32px !important; line-height: 1.2; }
-      .fact-item .count-title { font-size: 15px !important; }
-    }
-    .fact-item { margin-bottom: 20px; }
-    .fact-item .count-digit { word-wrap: break-word; line-height: 1.1; }
-
-    /* 4. MATCH SUBMIT BUTTON TO TEMPLATE'S "CONTACT US" BUTTON */
+    /* 3. SUBMIT BUTTON MATCHES TEMPLATE'S MAIN-BLUE-BUTTON */
     #lead-form button[type="submit"] {
       display: inline-block;
       width: 100%;
@@ -51,7 +59,7 @@
       font-size: 14px;
       font-weight: 500;
       color: #fff !important;
-      background-color: #007bff; /* Matches main-blue-button */
+      background-color: #007bff;
       border-radius: 23px;
       padding: 12px 0;
       text-decoration: none;
@@ -59,13 +67,42 @@
       border: none;
       cursor: pointer;
       font-family: 'Poppins', sans-serif;
+      margin-top: 10px;
     }
     #lead-form button[type="submit"]:hover {
       background-color: #0056b3;
       transform: translateY(-2px);
     }
 
-    /* 5. FIX FOOTER LINKS BEING INVISIBLE UNTIL HOVER */
+    /* 4. FORM INPUTS STYLING */
+    #lead-form input, 
+    #lead-form textarea {
+      width: 100%;
+      height: 46px;
+      background-color: #f8f9fa;
+      border: 1px solid #e0e0e0;
+      border-radius: 23px;
+      padding: 0 20px;
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 20px;
+      outline: none;
+      font-family: 'Poppins', sans-serif;
+      box-sizing: border-box;
+    }
+    #lead-form textarea {
+      height: 130px;
+      padding: 15px 20px;
+      resize: none;
+    }
+    #lead-form input:focus, 
+    #lead-form textarea:focus {
+      border-color: #007bff;
+      background-color: #fff;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    }
+
+    /* 5. FIX FOOTER LINKS INVISIBLE UNTIL HOVER */
     footer .footer-item ul {
       padding: 0;
       margin-top: 15px;
@@ -76,17 +113,17 @@
       display: block;
     }
     footer .footer-item ul li a {
-      color: #ffffff !important; /* Force white always */
+      color: #ffffff !important;
       text-decoration: none;
       font-size: 14px;
-      opacity: 1 !important; /* Kill the hover-only transparency */
+      opacity: 1 !important;
       transition: color 0.3s;
     }
     footer .footer-item ul li a:hover {
       color: #007bff !important;
     }
 
-    /* 6. FIX SOCIAL ICONS BEING VERTICAL */
+    /* 6. SOCIAL ICONS HORIZONTAL */
     footer .about.footer-item ul {
       display: flex !important;
       gap: 15px;
@@ -111,17 +148,17 @@
       background-color: #007bff;
     }
 
-    /* 7. KEEP FORM CLICKABLE & STYLED (From previous fix) */
+    /* 7. KEEP FORM CLICKABLE */
     .contact-dec, .contact-left-dec { pointer-events: none !important; z-index: 0 !important; }
     #contact .container { position: relative; z-index: 5; }
-    #lead-form input, #lead-form textarea {
-      width: 100%; height: 46px; background-color: transparent;
-      border: 1px solid #e0e0e0; border-radius: 23px; padding: 0 20px;
-      font-size: 14px; color: #333; margin-bottom: 20px; outline: none;
-      font-family: 'Poppins', sans-serif; box-sizing: border-box;
+
+    /* 8. FIX LAPTOP OVERLAP */
+    @media (min-width: 992px) and (max-width: 1199px) {
+      .fact-item .count-digit { font-size: 32px !important; line-height: 1.2; }
+      .fact-item .count-title { font-size: 15px !important; }
     }
-    #lead-form textarea { height: 130px; padding: 15px 20px; resize: none; }
-    #lead-form input:focus, #lead-form textarea:focus { border-color: #007bff; box-shadow: 0 0 5px rgba(0, 123, 255, 0.3); }
+    .fact-item { margin-bottom: 20px; }
+    .fact-item .count-digit { word-wrap: break-word; line-height: 1.1; }
   </style>
 </head>
 <body>
@@ -183,7 +220,6 @@
                 </div>
               </div>
             </div>
-            <!-- STRICTLY ISOLATED RIGHT IMAGE TO PREVENT DUPLICATION -->
             <div class="col-lg-6 align-self-center">
               <div class="right-image">
                 <img src="assets/images/banner-right-image.png" alt="BigBay Mall Video Editing Services">
@@ -349,33 +385,36 @@
           </div>
         </div>
         <div class="col-lg-5 align-self-center">
-          <form id="lead-form" action="https://formspree.io/f/mqpaezpr" method="POST">
-            <input type="hidden" name="_next" value="https://bigbaymall.com/">
-            <input type="hidden" name="_subject" value="New Video Editing Lead from BigBay Mall">
-            
-            <div class="row">
-              <div class="col-lg-12">
-                <fieldset>
-                  <input type="text" name="name" placeholder="Your Full Name" autocomplete="on" required>
-                </fieldset>
+          <!-- CONTACT FORM WRAPPED IN CARD -->
+          <div class="contact-card">
+            <form id="lead-form" action="https://formspree.io/f/mqpaezpr" method="POST">
+              <input type="hidden" name="_next" value="https://bigbaymall.com/">
+              <input type="hidden" name="_subject" value="New Video Editing Lead from BigBay Mall">
+              
+              <div class="row">
+                <div class="col-lg-12">
+                  <fieldset>
+                    <input type="text" name="name" placeholder="Your Full Name" autocomplete="on" required>
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <input type="email" name="email" placeholder="Your Email Address" required>
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <textarea name="message" rows="4" placeholder="Tell us about your video project (e.g., type of video, length, deadline)" required></textarea>
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <button type="submit">Submit Request</button>
+                  </fieldset>
+                </div>
               </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <input type="email" name="email" placeholder="Your Email Address" required>
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <textarea name="message" rows="4" placeholder="Tell us about your video project (e.g., type of video, length, deadline)" required></textarea>
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <button type="submit">Submit Request</button>
-                </fieldset>
-              </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -391,7 +430,6 @@
           <div class="about footer-item">
             <div class="logo"><a href="#"><img src="assets/images/logo.png" alt="BigBay Mall"></a></div>
             <a href="mailto:admin@bigbaymall.com" style="color: #fff; text-decoration: none;">admin@bigbaymall.com</a>
-            <!-- SOCIAL ICONS: Horizontal, FB, TikTok, Insta. UPDATE THE # LINKS WHEN YOU CREATE THE ACCOUNTS -->
             <ul>
               <li><a href="#" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
               <li><a href="#" target="_blank" title="TikTok"><i class="fa fa-tiktok"></i></a></li>
