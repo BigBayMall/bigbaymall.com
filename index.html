@@ -3,139 +3,163 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="theme-color" content="#0d0d0d">
   <meta name="description" content="BigBay Mall delivers premium video editing, motion graphics, and digital media services for creators, businesses, and brands.">
   <meta name="author" content="BigBay Mall">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://bigbaymall.com/">
-  <meta property="og:title" content="BigBay Mall | Video Editing & Digital Media">
-  <meta property="og:description" content="Premium video editing, motion graphics, and digital media services for creators, businesses, and brands.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://bigbaymall.com/">
-  <meta property="og:image" content="https://bigbaymall.com/assets/images/logo.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="BigBay Mall | Video Editing & Digital Media">
-  <meta name="twitter:description" content="Premium video editing, motion graphics, and digital media services for creators, businesses, and brands.">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <title>BigBay Mall | Video Editing &amp; Digital Media</title>
+  
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/fontawesome.css">
   <link rel="stylesheet" href="assets/css/templatemo-onix-digital.css">
   <link rel="stylesheet" href="assets/css/animated.css">
   <link rel="stylesheet" href="assets/css/owl.css">
+
+  <!-- MOBILE OPTIMIZATION OVERRIDES -->
   <style>
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
-    }
-
-    .form-note {
-      display: block;
-      margin-top: 12px;
-      font-size: 0.9rem;
-      color: rgba(255, 255, 255, 0.75);
-    }
-
-    .main-button:focus-visible,
-    .nav a:focus-visible,
-    input:focus-visible,
-    textarea:focus-visible,
-    button:focus-visible {
-      outline: 2px solid #ff5a5f;
-      outline-offset: 3px;
+    @media (max-width: 991px) {
+      .main-banner .item h2 { font-size: 28px !important; line-height: 1.3 !important; }
+      .main-banner .item p { font-size: 15px !important; }
+      .contact-us section form textarea { width: 100% !important; box-sizing: border-box; }
+      .footer-item { margin-bottom: 30px; text-align: center; }
+      .footer-item ul { display: flex; justify-content: center; padding-left: 0; }
+      .copyright { text-align: center; margin-top: 20px; }
     }
   </style>
 </head>
 <body>
   <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots"><span></span><span></span><span></span></div>
-    </div>
+    <div class="preloader-inner"><span class="dot"></span><div class="dots"><span></span><span></span><span></span></div></div>
   </div>
 
   <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <nav class="main-nav" aria-label="Main navigation">
-            <a href="index.html" class="logo" aria-label="BigBay Mall home">
-              <img src="assets/images/logo.png" alt="BigBay Mall logo">
-            </a>
+          <nav class="main-nav">
+            <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="BigBay Mall"></a>
             <ul class="nav">
               <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
               <li class="scroll-to-section"><a href="#services">Services</a></li>
               <li class="scroll-to-section"><a href="#about">About</a></li>
               <li class="scroll-to-section"><a href="#portfolio">Portfolio</a></li>
-              <li class="scroll-to-section"><a href="#video">Videos</a></li>
+              <!-- REMOVED GHOST "VIDEOS" LINK -->
               <li class="scroll-to-section"><a href="#contact">Contact Us</a></li>
-              <li class="scroll-to-section">
-                <div class="main-red-button-hover">
-                  <a href="#contact">Get a Free Quote</a>
-                </div>
-              </li>
+              <li class="scroll-to-section"><div class="main-red-button-hover"><a href="#contact">Contact Us Now</a></div></li>
             </ul>
-            <a class="menu-trigger" aria-label="Open navigation menu"><span>Menu</span></a>
+            <a class="menu-trigger"><span>Menu</span></a>
           </nav>
         </div>
       </div>
     </div>
   </header>
 
-  <main id="top">
-    <section class="main-banner" aria-label="Hero banner">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
+  <div class="main-banner" id="top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="owl-carousel owl-banner">
+                <div class="item header-text">
+                  <h6>Welcome to BigBay Mall</h6>
+                  <h2>Professional Video Editing &amp; <em>Premium Templates</em></h2>
+                  <p>High-quality video editing, color grading, and custom templates for creators, businesses, and brands. Fast turnaround, professional results.</p>
+                  <div class="down-buttons">
+                    <div class="main-blue-button-hover"><a href="#contact">Contact Us Now</a></div>
+                  </div>
+                </div>
+                <div class="item header-text">
+                  <h6>Digital Media Studio</h6>
+                  <h2>Creative edits for <em>brand growth</em> and <span>online visibility</span></h2>
+                  <p>From short-form content to polished long-form storytelling, we help businesses and creators stand out online with compelling visuals.</p>
+                  <div class="down-buttons">
+                    <div class="main-blue-button-hover"><a href="#services">Our Services</a></div>
+                  </div>
+                </div>
+                <div class="item header-text">
+                  <h6>Content Production</h6>
+                  <h2>Turn raw footage into <em>scroll-stopping</em> content for <span>your audience</span></h2>
+                  <p>We craft clean edits, professional motion graphics, and branded visuals that make your content more engaging, memorable, and conversion-focused.</p>
+                  <div class="down-buttons">
+                    <div class="main-blue-button-hover"><a href="#contact">Contact Us Now</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="services" class="our-services section">
+    <div class="services-right-dec"><img src="assets/images/services-right-dec.png" alt=""></div>
+    <div class="container">
+      <div class="services-left-dec"><img src="assets/images/services-left-dec.png" alt=""></div>
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading">
+            <h2>We <em>Deliver</em> Professional Video Services for <span>Modern Brands</span></h2>
+            <span>Our Services</span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="owl-carousel owl-services">
+            <div class="item"><h4>Short-Form Content</h4><div class="icon"><img src="assets/images/service-icon-01.png" alt=""></div><p>Engaging edits for TikTok, Reels, and YouTube Shorts designed to maximize retention.</p></div>
+            <div class="item"><h4>Long-Form Editing</h4><div class="icon"><img src="assets/images/service-icon-02.png" alt=""></div><p>Professional cuts, pacing, and storytelling for YouTube videos, podcasts, and corporate presentations.</p></div>
+            <div class="item"><h4>Color &amp; Sound Design</h4><div class="icon"><img src="assets/images/service-icon-03.png" alt=""></div><p>Cinematic color grading and clean audio mixing to make your footage look and sound professional.</p></div>
+            <div class="item"><h4>Custom Templates</h4><div class="icon"><img src="assets/images/service-icon-04.png" alt=""></div><p>Drag-and-drop Premiere Pro and DaVinci Resolve templates to speed up your workflow.</p></div>
+            <div class="item"><h4>Motion Graphics</h4><div class="icon"><img src="assets/images/service-icon-01.png" alt=""></div><p>Lower thirds, intro animations, and dynamic text to elevate your production value.</p></div>
+            <div class="item"><h4>Fast Turnaround</h4><div class="icon"><img src="assets/images/service-icon-02.png" alt=""></div><p>Reliable delivery times so you never miss your content publishing schedule.</p></div>
+            <div class="item"><h4>Brand Storytelling</h4><div class="icon"><img src="assets/images/service-icon-03.png" alt=""></div><p>We shape your footage into a clear message that connects with your target audience.</p></div>
+            <div class="item"><h4>Platform Optimization</h4><div class="icon"><img src="assets/images/service-icon-04.png" alt=""></div><p>Content formatted for TikTok, Instagram, YouTube, and other channels to maximize reach.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="about" class="about-us section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center">
+          <div class="left-image"><img src="assets/images/about-left-image.png" alt="Creative team editing video"></div>
+        </div>
+        <div class="col-lg-6">
+          <div class="section-heading">
+            <h2>We produce polished video content with <em>creative precision</em> and <span>fast execution</span></h2>
+            <p>BigBay Mall helps creators and businesses turn raw footage into high-impact digital media. Whether you need social clips, client reels, product promos, or branded storytelling, we build visuals that feel premium and perform.</p>
             <div class="row">
-              <div class="col-lg-6 align-self-center">
-                <div class="owl-carousel owl-banner">
-                  <div class="item header-text">
-                    <h6>Welcome to BigBay Mall</h6>
-                    <h2>Professional Video Editing &amp; <em>Premium Templates</em></h2>
-                    <p>High-quality video editing, color grading, and custom templates designed to elevate your content, captivate your audience, and help your brand stand out online.</p>
-                    <div class="down-buttons">
-                      <div class="main-blue-button-hover">
-                        <a href="#contact">Book a Project</a>
-                      </div>
-                      <div class="call-button">
-                        <a href="mailto:admin@bigbaymall.com"><i class="fa fa-envelope"></i> admin@bigbaymall.com</a>
-                      </div>
-                    </div>
+              <div class="col-lg-4">
+                <div class="fact-item">
+                  <div class="count-area-content">
+                    <div class="icon"><img src="assets/images/service-icon-01.png" alt=""></div>
+                    <div class="count-digit">4K</div>
+                    <div class="count-title">Resolution</div>
+                    <p>Delivering crisp, high-bitrate exports for any platform.</p>
                   </div>
-                  <div class="item header-text">
-                    <h6>Digital Media Studio</h6>
-                    <h2>Creative edits for <em>brand growth</em> and <span>online visibility</span></h2>
-                    <p>From short-form content to polished long-form storytelling, we create sleek, conversion-focused edits built for creators, businesses, and growing brands.</p>
-                    <div class="down-buttons">
-                      <div class="main-blue-button-hover">
-                        <a href="#portfolio">View Work</a>
-                      </div>
-                      <div class="call-button">
-                        <a href="#services">Explore Services</a>
-                      </div>
-                    </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="fact-item">
+                  <div class="count-area-content">
+                    <div class="icon"><img src="assets/images/service-icon-02.png" alt=""></div>
+                    <div class="count-digit">Unlimited</div>
+                    <div class="count-title">Revisions</div>
+                    <p>We work with you until the edit is exactly what you envisioned.</p>
                   </div>
-                  <div class="item header-text">
-                    <h6>Content Production</h6>
-                    <h2>Turn raw footage into <em>scroll-stopping</em> content for <span>your audience</span></h2>
-                    <p>We craft clean edits, polished motion graphics, and high-impact visuals that keep viewers engaged and make your message clearer, sharper, and stronger.</p>
-                    <div class="down-buttons">
-                      <div class="main-blue-button-hover">
-                        <a href="#pricing">See Packages</a>
-                      </div>
-                      <div class="call-button">
-                        <a href="#contact">Get Started</a>
-                      </div>
-                    </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="fact-item">
+                  <div class="count-area-content">
+                    <div class="icon"><img src="assets/images/service-icon-03.png" alt=""></div>
+                    <div class="count-digit">24h</div>
+                    <div class="count-title">Turnaround</div>
+                    <p>Rapid delivery options available for urgent content needs.</p>
                   </div>
                 </div>
               </div>
@@ -143,474 +167,175 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
 
-    <section id="services" class="our-services section" aria-labelledby="services-heading">
-      <div class="services-right-dec">
-        <img src="assets/images/services-right-dec.png" alt="">
-      </div>
-      <div class="container">
-        <div class="services-left-dec">
-          <img src="assets/images/services-left-dec.png" alt="">
-        </div>
-        <div class="row">
-          <div class="col-lg-6 offset-lg-3">
-            <div class="section-heading">
-              <h2 id="services-heading">What We <em>Do Best</em></h2>
-              <span>Our Services</span>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-3">
-            <div class="item">
-              <h4>Short-Form Content</h4>
-              <div class="icon"><img src="assets/images/service-icon-01.png" alt="Short-form content icon" loading="lazy"></div>
-              <p>Engaging edits for TikTok, Reels, and YouTube Shorts designed to maximize attention and boost your reach.</p>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="item">
-              <h4>Long-Form Editing</h4>
-              <div class="icon"><img src="assets/images/service-icon-02.png" alt="Long-form content icon" loading="lazy"></div>
-              <p>Professional cuts, pacing, and storytelling for YouTube videos, podcasts, interviews, and branded storytelling.</p>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="item">
-              <h4>Color &amp; Sound Design</h4>
-              <div class="icon"><img src="assets/images/service-icon-03.png" alt="Color and sound design icon" loading="lazy"></div>
-              <p>Cinematic color grading and clean audio mixing to give your footage a polished, high-end look.</p>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="item">
-              <h4>Custom Templates</h4>
-              <div class="icon"><img src="assets/images/service-icon-04.png" alt="Custom templates icon" loading="lazy"></div>
-              <p>Drag-and-drop Premiere Pro and DaVinci Resolve templates to speed up your editing workflow and keep consistency.</p>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="item">
-              <h4>Motion Graphics</h4>
-              <div class="icon"><img src="assets/images/service-icon-01.png" alt="Motion graphics icon" loading="lazy"></div>
-              <p>Lower thirds, intro animations, dynamic text, and graphic overlays that elevate your production value instantly.</p>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="item">
-              <h4>Fast Turnaround</h4>
-              <div class="icon"><img src="assets/images/service-icon-02.png" alt="Fast turnaround icon" loading="lazy"></div>
-              <p>Reliable delivery times so you never miss a launch, campaign, or publishing deadline again.</p>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="item">
-              <h4>Brand Storytelling</h4>
-              <div class="icon"><img src="assets/images/service-icon-03.png" alt="Brand storytelling icon" loading="lazy"></div>
-              <p>We shape your footage into a clear story that connects with your target audience and reinforces your message.</p>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="item">
-              <h4>Platform Optimization</h4>
-              <div class="icon"><img src="assets/images/service-icon-04.png" alt="Platform optimization icon" loading="lazy"></div>
-              <p>Content formatted for TikTok, Instagram, YouTube, and other channels so it performs beautifully everywhere.</p>
-            </div>
+  <div id="portfolio" class="our-portfolio section">
+    <div class="portfolio-left-dec"><img src="assets/images/portfolio-left-dec.png" alt=""></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading">
+            <h2>Recent <em>Video Edits</em> and Campaign Work <span>for Clients</span></h2>
+            <span>Our Portfolio</span>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="owl-carousel owl-portfolio">
+            <div class="item"><div class="thumb"><img src="assets/images/portfolio-01.jpg" alt=""><div class="hover-effect"><div class="inner-content"><a href="#"><h4>Tech Review Edit</h4></a><span>Product Launch Content</span></div></div></div></div>
+            <div class="item"><div class="thumb"><img src="assets/images/portfolio-02.jpg" alt=""><div class="hover-effect"><div class="inner-content"><a href="#"><h4>Real Estate Walkthrough Video</h4></a><span>Property Marketing</span></div></div></div></div>
+            <div class="item"><div class="thumb"><img src="assets/images/portfolio-03.jpg" alt=""><div class="hover-effect"><div class="inner-content"><a href="#"><h4>TikTok Ad Campaign</h4></a><span>Short-Form Social Media</span></div></div></div></div>
+            <div class="item"><div class="thumb"><img src="assets/images/portfolio-04.jpg" alt=""><div class="hover-effect"><div class="inner-content"><a href="#"><h4>Podcast Multi-Cam Edit</h4></a><span>Interview Production</span></div></div></div></div>
+            <div class="item"><div class="thumb"><img src="assets/images/portfolio-01.jpg" alt=""><div class="hover-effect"><div class="inner-content"><a href="#"><h4>Corporate Training Module</h4></a><span>Internal Education</span></div></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <section id="about" class="about-us section" aria-labelledby="about-heading">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 align-self-center">
-            <div class="left-image">
-              <img src="assets/images/about-left-image.png" alt="Creative video editing team and production process" loading="lazy">
-            </div>
-          </div>
-          <div class="col-lg-6 align-self-center">
-            <div class="section-heading">
-              <h2 id="about-heading">We turn raw footage into <em>high-impact storytelling</em></h2>
-              <p>At BigBay Mall, we help creators, businesses, and brands turn ordinary footage into polished visual experiences that look premium, feel professional, and perform across digital platforms.</p>
-              <div class="row">
-                <div class="col-lg-4">
-                  <div class="fact-item">
-                    <div class="count-area-content">
-                      <div class="icon"><img src="assets/images/service-icon-01.png" alt="4K delivery icon" loading="lazy"></div>
-                      <div class="count-digit">4K</div>
-                      <div class="count-title">Delivery</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4">
-                  <div class="fact-item">
-                    <div class="count-area-content">
-                      <div class="icon"><img src="assets/images/service-icon-02.png" alt="Unlimited revisions icon" loading="lazy"></div>
-                      <div class="count-digit">Unlimited</div>
-                      <div class="count-title">Revisions</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4">
-                  <div class="fact-item">
-                    <div class="count-area-content">
-                      <div class="icon"><img src="assets/images/service-icon-03.png" alt="Fast turnaround icon" loading="lazy"></div>
-                      <div class="count-digit">24h</div>
-                      <div class="count-title">Support</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+  <div id="pricing" class="pricing-tables">
+    <div class="tables-left-dec"><img src="assets/images/tables-left-dec.png" alt=""></div>
+    <div class="tables-right-dec"><img src="assets/images/tables-right-dec.png" alt=""></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading">
+            <h2>Select a suitable <em>package</em> for your next <span>video project</span></h2>
+            <span>Our Plans</span>
           </div>
         </div>
       </div>
-    </section>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="item first-item">
+            <h4>Short-Form Pack</h4><em>$150 / video</em><span>$150</span>
+            <ul><li>Up to 60 seconds</li><li>Captions and basic color/sound</li><li>1 revision</li><li>Fast social-first delivery</li></ul>
+            <div class="main-blue-button-hover"><a href="#contact">Get Started</a></div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="item second-item">
+            <h4>Long-Form Standard</h4><em>$450 / video</em><span>$450</span>
+            <ul><li>Up to 10 minutes</li><li>Multi-cam and advanced color/sound</li><li>2 revisions</li><li>Brand-aligned storytelling</li></ul>
+            <div class="main-blue-button-hover"><a href="#contact">Get it Now</a></div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="item third-item">
+            <h4>Monthly Retainer</h4><em>$1,500 / month</em><span>$1,500</span>
+            <ul><li>Dedicated editor</li><li>Up to 20 minutes of content per week</li><li>Priority support</li><li>Ongoing content pipeline</li></ul>
+            <div class="main-blue-button-hover"><a href="#contact">Buy Now</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <section id="portfolio" class="our-portfolio section" aria-labelledby="portfolio-heading">
-      <div class="portfolio-left-dec">
-        <img src="assets/images/portfolio-left-dec.png" alt="">
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 offset-lg-3">
-            <div class="section-heading">
-              <h2 id="portfolio-heading">Recent <em>Work</em></h2>
-              <span>Portfolio</span>
+  <div id="contact" class="contact-us section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="section-heading">
+            <h2>Feel free to <em>Contact</em> us about your <span>video project</span></h2>
+            <div class="info" style="margin-top: 30px;">
+              <span><i class="fa fa-envelope"></i> <a href="mailto:admin@bigbaymall.com">admin@bigbaymall.com</a></span>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="item">
-              <div class="thumb">
-                <img src="assets/images/portfolio-01.jpg" alt="Tech review edit portfolio preview" loading="lazy">
-                <div class="hover-effect">
-                  <div class="inner-content">
-                    <a href="#"><h4>Tech Review Edit</h4></a>
-                    <span>Product Launch</span>
-                  </div>
-                </div>
+        <div class="col-lg-5 align-self-center">
+          <form id="lead-form" action="https://formspree.io/f/mqpaezpr" method="POST">
+            <!-- UX UPGRADE: Redirects user back to your site and gives you a clear email subject -->
+            <input type="hidden" name="_next" value="https://bigbaymall.com/">
+            <input type="hidden" name="_subject" value="New Video Editing Lead from BigBay Mall">
+            
+            <div class="row">
+              <div class="col-lg-12">
+                <fieldset>
+                  <input type="text" name="name" placeholder="Your Full Name" autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <input type="email" name="email" placeholder="Your Email Address" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <textarea name="message" rows="4" placeholder="Tell us about your video project (e.g., type of video, length, deadline)" required style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc; font-family: inherit;"></textarea>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <button type="submit" class="main-button">Submit Request</button>
+                </fieldset>
               </div>
             </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="item">
-              <div class="thumb">
-                <img src="assets/images/portfolio-02.jpg" alt="Real estate walkthrough video preview" loading="lazy">
-                <div class="hover-effect">
-                  <div class="inner-content">
-                    <a href="#"><h4>Real Estate Walkthrough</h4></a>
-                    <span>Property Marketing</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="item">
-              <div class="thumb">
-                <img src="assets/images/portfolio-03.jpg" alt="TikTok ad campaign preview" loading="lazy">
-                <div class="hover-effect">
-                  <div class="inner-content">
-                    <a href="#"><h4>TikTok Ad Campaign</h4></a>
-                    <span>Short-Form Advertising</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="item">
-              <div class="thumb">
-                <img src="assets/images/portfolio-04.jpg" alt="Podcast multi-cam edit preview" loading="lazy">
-                <div class="hover-effect">
-                  <div class="inner-content">
-                    <a href="#"><h4>Podcast Multi-Cam Edit</h4></a>
-                    <span>Interview Production</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="item">
-              <div class="thumb">
-                <img src="assets/images/portfolio-01.jpg" alt="Corporate training module preview" loading="lazy">
-                <div class="hover-effect">
-                  <div class="inner-content">
-                    <a href="#"><h4>Corporate Training Module</h4></a>
-                    <span>Internal Education</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="item">
-              <div class="thumb">
-                <img src="assets/images/portfolio-02.jpg" alt="Social media content package preview" loading="lazy">
-                <div class="hover-effect">
-                  <div class="inner-content">
-                    <a href="#"><h4>Brand Content Package</h4></a>
-                    <span>Digital Media</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
-    </section>
+    </div>
+    <div class="contact-dec"><img src="assets/images/contact-dec.png" alt=""></div>
+    <div class="contact-left-dec"><img src="assets/images/contact-left-dec.png" alt=""></div>
+  </div>
 
-    <section id="pricing" class="pricing-tables" aria-labelledby="pricing-heading">
-      <div class="tables-left-dec">
-        <img src="assets/images/tables-left-dec.png" alt="">
-      </div>
-      <div class="tables-right-dec">
-        <img src="assets/images/tables-right-dec.png" alt="">
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 offset-lg-3">
-            <div class="section-heading">
-              <h2 id="pricing-heading">Simple pricing for <em>your next video project</em></h2>
-              <span>Packages</span>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="item first-item">
-              <h4>Short-Form Pack</h4>
-              <em>$150 / video</em>
-              <span>$150</span>
-              <ul>
-                <li>Up to 60 seconds</li>
-                <li>Captions and basic color/sound</li>
-                <li>1 revision round</li>
-                <li>Fast delivery</li>
-              </ul>
-              <div class="main-blue-button-hover">
-                <a href="#contact">Choose This</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="item second-item">
-              <h4>Long-Form Standard</h4>
-              <em>$450 / video</em>
-              <span>$450</span>
-              <ul>
-                <li>Up to 10 minutes</li>
-                <li>Multi-cam and advanced color/sound</li>
-                <li>2 revision rounds</li>
-                <li>Priority support</li>
-              </ul>
-              <div class="main-blue-button-hover">
-                <a href="#contact">Choose This</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="item third-item">
-              <h4>Monthly Retainer</h4>
-              <em>$1,500 / month</em>
-              <span>$1,500</span>
-              <ul>
-                <li>Dedicated editor</li>
-                <li>Up to 20 minutes of content per week</li>
-                <li>Ongoing revisions and support</li>
-                <li>Priority turnarounds</li>
-              </ul>
-              <div class="main-blue-button-hover">
-                <a href="#contact">Choose This</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="video" class="our-videos section" aria-labelledby="video-heading">
-      <div class="videos-left-dec">
-        <img src="assets/images/videos-left-dec.png" alt="">
-      </div>
-      <div class="videos-right-dec">
-        <img src="assets/images/videos-right-dec.png" alt="">
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 offset-lg-3">
-            <div class="section-heading">
-              <h2 id="video-heading">See our <em>latest work</em></h2>
-              <span>Video Showcase</span>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <ul class="naccs">
-              <li class="active">
-                <div>
-                  <div class="thumb">
-                    <iframe width="100%" height="auto" src="https://www.youtube.com/embed/JynGuQx4a1Y" title="Video editing showcase" frameborder="0" allowfullscreen loading="lazy"></iframe>
-                    <div class="overlay-effect">
-                      <a href="https://www.youtube.com/watch?v=JynGuQx4a1Y" target="_blank" rel="noreferrer"><h4>Video Editing Showcase</h4></a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <div class="thumb">
-                    <iframe width="100%" height="auto" src="https://www.youtube.com/embed/RdJBSFpcO4M" title="Advertising showcase" frameborder="0" allowfullscreen loading="lazy"></iframe>
-                    <div class="overlay-effect">
-                      <a href="https://www.youtube.com/watch?v=RdJBSFpcO4M" target="_blank" rel="noreferrer"><h4>Brand Content</h4></a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <div class="thumb">
-                    <iframe width="100%" height="auto" src="https://www.youtube.com/embed/ZlfAjbQiL78" title="Digital content showcase" frameborder="0" allowfullscreen loading="lazy"></iframe>
-                    <div class="overlay-effect">
-                      <a href="https://www.youtube.com/watch?v=ZlfAjbQiL78" target="_blank" rel="noreferrer"><h4>Digital Content</h4></a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <div class="thumb">
-                    <iframe width="100%" height="auto" src="https://www.youtube.com/embed/mx1WseE7-0Y" title="Motion graphics showcase" frameborder="0" allowfullscreen loading="lazy"></iframe>
-                    <div class="overlay-effect">
-                      <a href="https://www.youtube.com/watch?v=mx1WseE7-0Y" target="_blank" rel="noreferrer"><h4>Motion Graphics</h4></a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="contact-us section" aria-labelledby="contact-heading">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-7">
-            <div class="section-heading">
-              <h2 id="contact-heading">Feel free to <em>Contact</em> us about your <span>video project</span></h2>
-              <p>Tell us what you need, what type of content you want to create, and your timeline. We’ll help you shape the perfect plan and deliver a polished result that matches your goals.</p>
-              <div class="info" style="margin-top: 30px;">
-                <span><i class="fa fa-envelope"></i> <a href="mailto:admin@bigbaymall.com">admin@bigbaymall.com</a></span>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-5 align-self-center">
-            <form id="lead-form" action="https://formspree.io/f/mqpaezpr" method="POST">
-              <input type="hidden" name="_subject" value="New BigBay Mall Project Inquiry">
-              <input type="hidden" name="_captcha" value="false">
-              <div class="row">
-                <div class="col-lg-12">
-                  <fieldset>
-                    <label for="name" class="sr-only">Your full name</label>
-                    <input id="name" type="text" name="name" placeholder="Your Full Name" autocomplete="on" required>
-                  </fieldset>
-                </div>
-                <div class="col-lg-12">
-                  <fieldset>
-                    <label for="email" class="sr-only">Your email address</label>
-                    <input id="email" type="email" name="email" placeholder="Your Email Address" required>
-                  </fieldset>
-                </div>
-                <div class="col-lg-12">
-                  <fieldset>
-                    <label for="message" class="sr-only">Project details</label>
-                    <textarea id="message" name="message" rows="4" placeholder="Tell us about your video project (e.g., type of video, length, deadline)" required style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.03); color: #fff;"></textarea>
-                  </fieldset>
-                </div>
-                <div class="col-lg-12">
-                  <fieldset>
-                    <button type="submit" class="main-button">Submit Request</button>
-                    <small class="form-note">We usually respond within 24 hours.</small>
-                  </fieldset>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-      <div class="contact-dec"><img src="assets/images/contact-dec.png" alt=""></div>
-      <div class="contact-left-dec"><img src="assets/images/contact-left-dec.png" alt=""></div>
-    </section>
-  </main>
-
+  <!-- REBUILT FOOTER: Fixed broken grid nesting, updated email, year, and address -->
   <div class="footer-dec"><img src="assets/images/footer-dec.png" alt=""></div>
-
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-lg-3">
+        <div class="col-lg-4">
           <div class="about footer-item">
-            <div class="logo">
-              <a href="index.html"><img src="assets/images/logo.png" alt="BigBay Mall footer logo"></a>
-            </div>
-            <p>BigBay Mall creates premium video editing and digital media content that helps brands and creators grow with confidence.</p>
+            <div class="logo"><a href="#"><img src="assets/images/logo.png" alt="BigBay Mall"></a></div>
+            <a href="mailto:admin@bigbaymall.com">admin@bigbaymall.com</a>
+            <ul>
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-behance"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
           </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-4">
           <div class="services footer-item">
             <h4>Services</h4>
             <ul>
               <li><a href="#services">Video Editing</a></li>
-              <li><a href="#services">Color Grading</a></li>
+              <li><a href="#services">Brand Storytelling</a></li>
               <li><a href="#services">Motion Graphics</a></li>
-              <li><a href="#services">Social Media Content</a></li>
+              <li><a href="#services">Content Strategy</a></li>
             </ul>
           </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-4">
           <div class="community footer-item">
-            <h4>Quick Links</h4>
+            <h4>Company</h4>
             <ul>
-              <li><a href="#about">About</a></li>
+              <li><a href="#about">About Us</a></li>
               <li><a href="#portfolio">Portfolio</a></li>
               <li><a href="#pricing">Pricing</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
         </div>
-        <div class="col-lg-3">
-          <div class="subscribe-newsletters footer-item">
-            <h4>Contact</h4>
-            <p><a href="mailto:admin@bigbaymall.com">admin@bigbaymall.com</a></p>
+        <div class="col-lg-12">
+          <div class="copyright">
+            <p>Copyright © 2026 BigBay Mall LLC. All Rights Reserved.<br>
+            Registered Office: 30 N Gould St, Ste R, Sheridan, WY 82801, USA.</p>
           </div>
         </div>
       </div>
     </div>
   </footer>
 
-  <script src="vendor/jquery/jquery.min.js" defer></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
-  <script src="assets/js/owl-carousel.js" defer></script>
-  <script src="assets/js/animation.js" defer></script>
-  <script defer>
-    $(document).ready(function() {
-      $(".naccs .menu div").on("click", function() {
-        var numberIndex = $(this).index();
-        if (!$(this).hasClass("active")) {
-          $(".naccs .menu div").removeClass("active");
-          $(".naccs ul li").removeClass("active");
-          $(this).addClass("active");
-          $(".naccs ul li").eq(numberIndex).addClass("active");
-        }
-      });
-    });
-  </script>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/animation.js"></script>
+  <script src="assets/js/imagesloaded.js"></script>
+  <script src="assets/js/custom.js"></script>
 </body>
 </html>
