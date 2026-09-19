@@ -5,29 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="BigBay Mall delivers premium video editing, motion graphics, and digital media services for creators, businesses, and brands.">
   <meta name="author" content="BigBay Mall">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <title>BigBay Mall | Video Editing &amp; Digital Media</title>
   
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/fontawesome.css">
   <link rel="stylesheet" href="assets/css/templatemo-onix-digital.css">
   <link rel="stylesheet" href="assets/css/animated.css">
   <link rel="stylesheet" href="assets/css/owl.css">
 
-  <!-- MASTER FIXES: Banner duplication, button styling, contact card, footer visibility -->
   <style>
-    /* 1. FIX BANNER IMAGE DUPLICATION */
-    .main-banner .right-image {
-      position: relative;
-      z-index: 10;
+    /* ============================================
+       1. KILL HERO IMAGE DUPLICATION (NUKE MODE)
+       ============================================ */
+    .main-banner .right-image,
+    .main-banner .right-image * {
+      background-image: none !important;
+      background: none !important;
+    }
+    .main-banner .right-image::before,
+    .main-banner .right-image::after {
+      display: none !important;
+      content: none !important;
     }
     .main-banner .right-image img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      background-image: none !important;
+      display: block !important;
+      position: relative !important;
+      z-index: 10 !important;
+      max-width: 100% !important;
+      height: auto !important;
+      background: transparent !important;
+      box-shadow: none !important;
     }
+    /* Kill any owl-carousel cloning artifacts on the right image */
+    .main-banner .right-image .cloned,
+    .main-banner .right-image .owl-item:not(.active) {
+      display: none !important;
+    }
+
+    /* ============================================
+       2. MOBILE HERO SPACING
+       ============================================ */
     @media (max-width: 991px) {
       .main-banner { padding-top: 100px !important; padding-bottom: 40px !important; }
       .main-banner .item { text-align: center; padding-top: 0 !important; }
@@ -35,10 +54,12 @@
       .main-banner .item p { font-size: 15px !important; margin-bottom: 20px !important; }
       .main-banner .down-buttons { justify-content: center; }
       .main-banner .right-image { margin-top: 30px; text-align: center; }
-      .main-banner .right-image img { max-width: 80%; }
+      .main-banner .right-image img { max-width: 80% !important; }
     }
 
-    /* 2. CONTACT FORM CARD (Matches pricing card style) */
+    /* ============================================
+       3. CONTACT FORM CARD
+       ============================================ */
     .contact-card {
       background-color: #fff;
       border-radius: 24px;
@@ -51,31 +72,41 @@
       .contact-card { padding: 30px 20px; margin-top: 30px; }
     }
 
-    /* 3. SUBMIT BUTTON MATCHES TEMPLATE'S MAIN-BLUE-BUTTON */
+    /* ============================================
+       4. SUBMIT BUTTON - EXACT MATCH TO TEMPLATE CTA
+       ============================================ */
     #lead-form button[type="submit"] {
-      display: inline-block;
-      width: 100%;
-      text-align: center;
-      font-size: 14px;
-      font-weight: 500;
+      display: block !important;
+      width: 100% !important;
+      text-align: center !important;
+      font-size: 15px !important;
+      font-weight: 600 !important;
       color: #fff !important;
-      background-color: #007bff;
-      border-radius: 23px;
-      padding: 12px 0;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      border: none;
-      cursor: pointer;
-      font-family: 'Poppins', sans-serif;
-      margin-top: 10px;
+      background-color: #ff695f !important;
+      background: #ff695f !important;
+      border: none !important;
+      border-radius: 23px !important;
+      padding: 14px 0 !important;
+      cursor: pointer !important;
+      font-family: 'Poppins', sans-serif !important;
+      letter-spacing: 0.5px !important;
+      transition: all 0.3s ease !important;
+      margin-top: 10px !important;
+      text-decoration: none !important;
+      line-height: 1.5 !important;
     }
     #lead-form button[type="submit"]:hover {
-      background-color: #0056b3;
-      transform: translateY(-2px);
+      background-color: #e05048 !important;
+      background: #e05048 !important;
+      color: #fff !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 5px 15px rgba(255, 105, 95, 0.4) !important;
     }
 
-    /* 4. FORM INPUTS STYLING */
-    #lead-form input, 
+    /* ============================================
+       5. FORM INPUTS
+       ============================================ */
+    #lead-form input,
     #lead-form textarea {
       width: 100%;
       height: 46px;
@@ -95,64 +126,78 @@
       padding: 15px 20px;
       resize: none;
     }
-    #lead-form input:focus, 
+    #lead-form input:focus,
     #lead-form textarea:focus {
-      border-color: #007bff;
+      border-color: #ff695f;
       background-color: #fff;
-      box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+      box-shadow: 0 0 5px rgba(255, 105, 95, 0.3);
     }
 
-    /* 5. FIX FOOTER LINKS INVISIBLE UNTIL HOVER */
+    /* ============================================
+       6. FOOTER LINKS - WHITE DEFAULT, ORANGE HOVER
+       (Matches header menu behavior)
+       ============================================ */
     footer .footer-item ul {
-      padding: 0;
-      margin-top: 15px;
-      list-style: none;
+      padding: 0 !important;
+      margin-top: 15px !important;
+      list-style: none !important;
     }
     footer .footer-item ul li {
-      margin-bottom: 12px;
-      display: block;
+      margin-bottom: 12px !important;
+      display: block !important;
+      list-style: none !important;
     }
     footer .footer-item ul li a {
       color: #ffffff !important;
-      text-decoration: none;
-      font-size: 14px;
+      text-decoration: none !important;
+      font-size: 14px !important;
       opacity: 1 !important;
-      transition: color 0.3s;
+      visibility: visible !important;
+      display: inline-block !important;
+      transition: color 0.3s ease !important;
     }
     footer .footer-item ul li a:hover {
-      color: #007bff !important;
+      color: #ff695f !important;
     }
 
-    /* 6. SOCIAL ICONS HORIZONTAL */
-    footer .about.footer-item ul {
+    /* ============================================
+       7. SOCIAL ICONS - HORIZONTAL
+       ============================================ */
+    footer .about.footer-item > ul {
       display: flex !important;
-      gap: 15px;
-      padding: 0;
-      margin-top: 15px;
+      flex-direction: row !important;
+      gap: 12px !important;
+      padding: 0 !important;
+      margin-top: 20px !important;
+      flex-wrap: wrap !important;
     }
-    footer .about.footer-item ul li {
+    footer .about.footer-item > ul li {
       margin-bottom: 0 !important;
+      display: inline-block !important;
     }
-    footer .about.footer-item ul li a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 36px;
-      height: 36px;
-      background-color: rgba(255,255,255,0.1);
-      border-radius: 50%;
+    footer .about.footer-item > ul li a {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 38px !important;
+      height: 38px !important;
+      background-color: rgba(255,255,255,0.1) !important;
+      border-radius: 50% !important;
       color: #fff !important;
-      font-size: 16px;
+      font-size: 16px !important;
+      transition: all 0.3s ease !important;
     }
-    footer .about.footer-item ul li a:hover {
-      background-color: #007bff;
+    footer .about.footer-item > ul li a:hover {
+      background-color: #ff695f !important;
+      color: #fff !important;
     }
 
-    /* 7. KEEP FORM CLICKABLE */
+    /* ============================================
+       8. KEEP FORM CLICKABLE + FIX LAPTOP OVERLAP
+       ============================================ */
     .contact-dec, .contact-left-dec { pointer-events: none !important; z-index: 0 !important; }
     #contact .container { position: relative; z-index: 5; }
 
-    /* 8. FIX LAPTOP OVERLAP */
     @media (min-width: 992px) and (max-width: 1199px) {
       .fact-item .count-digit { font-size: 32px !important; line-height: 1.2; }
       .fact-item .count-title { font-size: 15px !important; }
@@ -380,38 +425,20 @@
           <div class="section-heading">
             <h2>Feel free to <em>Contact</em> us about your <span>video project</span></h2>
             <div class="info" style="margin-top: 30px;">
-              <span><i class="fa fa-envelope"></i> <a href="mailto:admin@bigbaymall.com">admin@bigbaymall.com</a></span>
+              <span><i class="fa fa-envelope"></i> <a href="mailto:admin@bigbaymall.com" style="color:#fff;">admin@bigbaymall.com</a></span>
             </div>
           </div>
         </div>
         <div class="col-lg-5 align-self-center">
-          <!-- CONTACT FORM WRAPPED IN CARD -->
           <div class="contact-card">
             <form id="lead-form" action="https://formspree.io/f/mqpaezpr" method="POST">
               <input type="hidden" name="_next" value="https://bigbaymall.com/">
               <input type="hidden" name="_subject" value="New Video Editing Lead from BigBay Mall">
-              
               <div class="row">
-                <div class="col-lg-12">
-                  <fieldset>
-                    <input type="text" name="name" placeholder="Your Full Name" autocomplete="on" required>
-                  </fieldset>
-                </div>
-                <div class="col-lg-12">
-                  <fieldset>
-                    <input type="email" name="email" placeholder="Your Email Address" required>
-                  </fieldset>
-                </div>
-                <div class="col-lg-12">
-                  <fieldset>
-                    <textarea name="message" rows="4" placeholder="Tell us about your video project (e.g., type of video, length, deadline)" required></textarea>
-                  </fieldset>
-                </div>
-                <div class="col-lg-12">
-                  <fieldset>
-                    <button type="submit">Submit Request</button>
-                  </fieldset>
-                </div>
+                <div class="col-12"><fieldset><input type="text" name="name" placeholder="Your Full Name" autocomplete="on" required></fieldset></div>
+                <div class="col-12"><fieldset><input type="email" name="email" placeholder="Your Email Address" required></fieldset></div>
+                <div class="col-12"><fieldset><textarea name="message" rows="4" placeholder="Tell us about your video project (e.g., type of video, length, deadline)" required></textarea></fieldset></div>
+                <div class="col-12"><fieldset><button type="submit">Submit Request</button></fieldset></div>
               </div>
             </form>
           </div>
