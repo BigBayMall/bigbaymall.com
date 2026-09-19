@@ -5,189 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="BigBay Mall delivers premium video editing, motion graphics, and digital media services for creators, businesses, and brands.">
   <meta name="author" content="BigBay Mall">
-  
-  <!-- Open Graph Meta Tags for Social Sharing -->
-  <meta property="og:title" content="BigBay Mall | Video Editing & Digital Media">
-  <meta property="og:description" content="Professional video editing, color grading, and custom templates for creators, businesses, and brands.">
-  <meta property="og:image" content="https://bigbaymall.com/assets/images/banner-right-image.png">
-  <meta property="og:url" content="https://bigbaymall.com">
-  <meta property="og:type" content="website">
-  
-  <title>BigBay Mall | Video Editing &amp; Digital Media</title>
-  
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <title>BigBay Mall | Video Editing &amp; Digital Media</title>
+  
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/fontawesome.css">
   <link rel="stylesheet" href="assets/css/templatemo-onix-digital.css">
   <link rel="stylesheet" href="assets/css/animated.css">
   <link rel="stylesheet" href="assets/css/owl.css">
 
+  <!-- MOBILE OPTIMIZATION OVERRIDES -->
   <style>
-    /* ============================================
-       1. KILL HERO IMAGE DUPLICATION (::before / ::after ONLY)
-       ============================================ */
-    .main-banner .right-image::before,
-    .main-banner .right-image::after,
-    .main-banner::before,
-    .main-banner::after {
-      content: none !important;
-      display: none !important;
-      background: none !important;
-      background-image: none !important;
-      background-color: transparent !important;
-    }
-    .main-banner .right-image img {
-      display: block !important;
-      position: relative !important;
-      z-index: 10 !important;
-      max-width: 100% !important;
-      height: auto !important;
-      background: transparent !important;
-      box-shadow: none !important;
-      border: none !important;
-    }
-
-    /* ============================================
-       2. FIX HEADER PADDING & MOBILE SPACING
-       ============================================ */
-    .main-banner {
-      padding-top: 120px !important; /* Clears the sticky header on desktop */
-      padding-bottom: 60px !important;
-    }
     @media (max-width: 991px) {
-      .main-banner { padding-top: 100px !important; padding-bottom: 40px !important; }
-      .main-banner .item { text-align: center; padding-top: 0 !important; }
-      .main-banner .item h1 { font-size: 28px !important; line-height: 1.3 !important; }
-      .main-banner .item p { font-size: 15px !important; margin-bottom: 20px !important; }
-      .main-banner .down-buttons { justify-content: center; }
-      .main-banner .right-image { margin-top: 30px; text-align: center; }
-      .main-banner .right-image img { max-width: 80% !important; }
+      .main-banner .item h2 { font-size: 28px !important; line-height: 1.3 !important; }
+      .main-banner .item p { font-size: 15px !important; }
+      .contact-us section form textarea { width: 100% !important; box-sizing: border-box; }
+      .footer-item { margin-bottom: 30px; text-align: center; }
+      .footer-item ul { display: flex; justify-content: center; padding-left: 0; }
+      .copyright { text-align: center; margin-top: 20px; }
     }
-
-    /* ============================================
-       3. CONTACT FORM CARD
-       ============================================ */
-    .contact-card {
-      background-color: #fff;
-      border-radius: 24px;
-      padding: 40px 30px;
-      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-      position: relative;
-      z-index: 5;
-    }
-    @media (max-width: 991px) {
-      .contact-card { padding: 30px 20px; margin-top: 30px; }
-    }
-
-    /* ============================================
-       4. FORM INPUTS
-       ============================================ */
-    #lead-form input,
-    #lead-form textarea {
-      width: 100%;
-      height: 46px;
-      background-color: #f8f9fa;
-      border: 1px solid #e0e0e0;
-      border-radius: 23px;
-      padding: 0 20px;
-      font-size: 14px;
-      color: #333;
-      margin-bottom: 20px;
-      outline: none;
-      font-family: 'Poppins', sans-serif;
-      box-sizing: border-box;
-    }
-    #lead-form textarea {
-      height: 130px;
-      padding: 15px 20px;
-      resize: none;
-    }
-    #lead-form input:focus,
-    #lead-form textarea:focus {
-      border-color: #ff695f;
-      background-color: #fff;
-      box-shadow: 0 0 5px rgba(255, 105, 95, 0.3);
-    }
-    .sr-only {
-      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
-      overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
-    }
-
-    /* ============================================
-       5. FOOTER LINKS & EMAIL - GRAY DEFAULT, ORANGE HOVER
-       ============================================ */
-    footer .footer-item ul {
-      padding: 0 !important;
-      margin-top: 15px !important;
-      list-style: none !important;
-    }
-    footer .footer-item ul li {
-      margin-bottom: 12px !important;
-      display: block !important;
-    }
-    footer .footer-item ul li a,
-    footer .about.footer-item > a {
-      color: #7a7a7a !important;
-      text-decoration: none !important;
-      font-size: 14px !important;
-      opacity: 1 !important;
-      visibility: visible !important;
-      display: inline-block !important;
-      transition: color 0.3s ease !important;
-    }
-    footer .footer-item ul li a:hover,
-    footer .about.footer-item > a:hover {
-      color: #ff695f !important;
-    }
-    footer .about.footer-item > a {
-      display: block !important;
-      margin-bottom: 15px !important;
-    }
-
-    /* ============================================
-       6. SOCIAL ICONS - GRAY DEFAULT, ORANGE HOVER
-       ============================================ */
-    footer .about.footer-item > ul {
-      display: flex !important;
-      flex-direction: row !important;
-      gap: 12px !important;
-      padding: 0 !important;
-      margin-top: 10px !important;
-    }
-    footer .about.footer-item > ul li {
-      margin-bottom: 0 !important;
-      display: inline-block !important;
-    }
-    footer .about.footer-item > ul li a {
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      width: 38px !important;
-      height: 38px !important;
-      background-color: rgba(122, 122, 122, 0.1) !important;
-      border-radius: 50% !important;
-      color: #7a7a7a !important;
-      font-size: 16px !important;
-      transition: all 0.3s ease !important;
-    }
-    footer .about.footer-item > ul li a:hover {
-      background-color: #ff695f !important;
-      color: #fff !important;
-    }
-
-    /* ============================================
-       7. KEEP FORM CLICKABLE + FIX LAPTOP OVERLAP
-       ============================================ */
-    .contact-dec, .contact-left-dec { pointer-events: none !important; z-index: 0 !important; }
-    #contact .container { position: relative; z-index: 5; }
-
-    @media (min-width: 992px) and (max-width: 1199px) {
-      .fact-item .count-digit { font-size: 32px !important; line-height: 1.2; }
-      .fact-item .count-title { font-size: 15px !important; }
-    }
-    .fact-item { margin-bottom: 20px; }
-    .fact-item .count-digit { word-wrap: break-word; line-height: 1.1; }
   </style>
 </head>
 <body>
@@ -206,6 +43,7 @@
               <li class="scroll-to-section"><a href="#services">Services</a></li>
               <li class="scroll-to-section"><a href="#about">About</a></li>
               <li class="scroll-to-section"><a href="#portfolio">Portfolio</a></li>
+              <!-- REMOVED GHOST "VIDEOS" LINK -->
               <li class="scroll-to-section"><a href="#contact">Contact Us</a></li>
               <li class="scroll-to-section"><div class="main-red-button-hover"><a href="#contact">Contact Us Now</a></div></li>
             </ul>
@@ -214,7 +52,7 @@
         </div>
       </div>
     </div>
-    </header>
+  </header>
 
   <div class="main-banner" id="top">
     <div class="container">
@@ -225,7 +63,7 @@
               <div class="owl-carousel owl-banner">
                 <div class="item header-text">
                   <h6>Welcome to BigBay Mall</h6>
-                  <h2>Professional Video <em>Editing</em> with <span>Premium Templates</span></h2>
+                  <h2>Professional Video Editing &amp; <em>Premium Templates</em></h2>
                   <p>High-quality video editing, color grading, and custom templates for creators, businesses, and brands. Fast turnaround, professional results.</p>
                   <div class="down-buttons">
                     <div class="main-blue-button-hover"><a href="#contact">Contact Us Now</a></div>
@@ -249,11 +87,6 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-6 align-self-center">
-              <div class="right-image">
-                <img src="assets/images/banner-right-image.png" alt="BigBay Mall Video Editing Services">
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -275,14 +108,14 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="owl-carousel owl-services">
-            <div class="item"><h4>Short-Form Content</h4><div class="icon"><img src="assets/images/service-icon-01.png" alt="Short-Form Content"></div><p>Engaging edits for TikTok, Reels, and YouTube Shorts designed to maximize retention.</p></div>
-            <div class="item"><h4>Long-Form Editing</h4><div class="icon"><img src="assets/images/service-icon-02.png" alt="Long-Form Editing"></div><p>Professional cuts, pacing, and storytelling for YouTube videos, podcasts, and corporate presentations.</p></div>
-            <div class="item"><h4>Color &amp; Sound Design</h4><div class="icon"><img src="assets/images/service-icon-03.png" alt="Color and Sound Design"></div><p>Cinematic color grading and clean audio mixing to make your footage look and sound professional.</p></div>
-            <div class="item"><h4>Custom Templates</h4><div class="icon"><img src="assets/images/service-icon-04.png" alt="Custom Templates"></div><p>Drag-and-drop Premiere Pro and DaVinci Resolve templates to speed up your workflow.</p></div>
-            <div class="item"><h4>Motion Graphics</h4><div class="icon"><img src="assets/images/service-icon-01.png" alt="Motion Graphics"></div><p>Lower thirds, intro animations, and dynamic text to elevate your production value.</p></div>
-            <div class="item"><h4>Fast Turnaround</h4><div class="icon"><img src="assets/images/service-icon-02.png" alt="Fast Turnaround"></div><p>Reliable delivery times so you never miss your content publishing schedule.</p></div>
-            <div class="item"><h4>Brand Storytelling</h4><div class="icon"><img src="assets/images/service-icon-03.png" alt="Brand Storytelling"></div><p>We shape your footage into a clear message that connects with your target audience.</p></div>
-            <div class="item"><h4>Platform Optimization</h4><div class="icon"><img src="assets/images/service-icon-04.png" alt="Platform Optimization"></div><p>Content formatted for TikTok, Instagram, YouTube, and other channels to maximize reach.</p></div>
+            <div class="item"><h4>Short-Form Content</h4><div class="icon"><img src="assets/images/service-icon-01.png" alt=""></div><p>Engaging edits for TikTok, Reels, and YouTube Shorts designed to[...]
+            <div class="item"><h4>Long-Form Editing</h4><div class="icon"><img src="assets/images/service-icon-02.png" alt=""></div><p>Professional cuts, pacing, and storytelling for YouTube videos, p[...]
+            <div class="item"><h4>Color &amp; Sound Design</h4><div class="icon"><img src="assets/images/service-icon-03.png" alt=""></div><p>Cinematic color grading and clean audio mixing to make you[...]
+            <div class="item"><h4>Custom Templates</h4><div class="icon"><img src="assets/images/service-icon-04.png" alt=""></div><p>Drag-and-drop Premiere Pro and DaVinci Resolve templates to speed [...]
+            <div class="item"><h4>Motion Graphics</h4><div class="icon"><img src="assets/images/service-icon-01.png" alt=""></div><p>Lower thirds, intro animations, and dynamic text to elevate your pr[...]
+            <div class="item"><h4>Fast Turnaround</h4><div class="icon"><img src="assets/images/service-icon-02.png" alt=""></div><p>Reliable delivery times so you never miss your content publishing s[...]
+            <div class="item"><h4>Brand Storytelling</h4><div class="icon"><img src="assets/images/service-icon-03.png" alt=""></div><p>We shape your footage into a clear message that connects with yo[...]
+            <div class="item"><h4>Platform Optimization</h4><div class="icon"><img src="assets/images/service-icon-04.png" alt=""></div><p>Content formatted for TikTok, Instagram, YouTube, and other c[...]
           </div>
         </div>
       </div>
@@ -298,7 +131,7 @@
         <div class="col-lg-6">
           <div class="section-heading">
             <h2>We produce polished video content with <em>creative precision</em> and <span>fast execution</span></h2>
-            <p>BigBay Mall helps creators and businesses turn raw footage into high-impact digital media. Whether you need social clips, client reels, product promos, or branded storytelling, we build visuals that feel premium and perform.</p>
+            <p>BigBay Mall helps creators and businesses turn raw footage into high-impact digital media. Whether you need social clips, client reels, product promos, or branded storytelling, we build[...]
             <div class="row">
               <div class="col-lg-4">
                 <div class="fact-item">
@@ -353,11 +186,11 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="owl-carousel owl-portfolio">
-            <div class="item"><div class="thumb"><img src="assets/images/portfolio-01.jpg" alt="Tech Review Edit - Product Launch Content"><div class="hover-effect"><div class="inner-content"><a href="#"><h4>Tech Review Edit</h4></a><span>Product Launch Content</span></div></div></div></div>
-            <div class="item"><div class="thumb"><img src="assets/images/portfolio-02.jpg" alt="Real Estate Walkthrough Video - Property Marketing"><div class="hover-effect"><div class="inner-content"><a href="#"><h4>Real Estate Walkthrough Video</h4></a><span>Property Marketing</span></div></div></div></div>
-            <div class="item"><div class="thumb"><img src="assets/images/portfolio-03.jpg" alt="TikTok Ad Campaign - Short-Form Social Media"><div class="hover-effect"><div class="inner-content"><a href="#"><h4>TikTok Ad Campaign</h4></a><span>Short-Form Social Media</span></div></div></div></div>
-            <div class="item"><div class="thumb"><img src="assets/images/portfolio-04.jpg" alt="Podcast Multi-Cam Edit - Interview Production"><div class="hover-effect"><div class="inner-content"><a href="#"><h4>Podcast Multi-Cam Edit</h4></a><span>Interview Production</span></div></div></div></div>
-            <div class="item"><div class="thumb"><img src="assets/images/portfolio-01.jpg" alt="Corporate Training Module - Internal Education"><div class="hover-effect"><div class="inner-content"><a href="#"><h4>Corporate Training Module</h4></a><span>Internal Education</span></div></div></div></div>
+            <div class="item"><div class="thumb"><img src="assets/images/portfolio-01.jpg" alt=""><div class="hover-effect"><div class="inner-content"><a href="#"><h4>Tech Review Edit</h4></a><span>Pr[...]
+            <div class="item"><div class="thumb"><img src="assets/images/portfolio-02.jpg" alt=""><div class="hover-effect"><div class="inner-content"><a href="#"><h4>Real Estate Walkthrough Video</h4[...]
+            <div class="item"><div class="thumb"><img src="assets/images/portfolio-03.jpg" alt=""><div class="hover-effect"><div class="inner-content"><a href="#"><h4>TikTok Ad Campaign</h4></a><span>[...]
+            <div class="item"><div class="thumb"><img src="assets/images/portfolio-04.jpg" alt=""><div class="hover-effect"><div class="inner-content"><a href="#"><h4>Podcast Multi-Cam Edit</h4></a><s[...]
+            <div class="item"><div class="thumb"><img src="assets/images/portfolio-01.jpg" alt=""><div class="hover-effect"><div class="inner-content"><a href="#"><h4>Corporate Training Module</h4></a[...]
           </div>
         </div>
       </div>
@@ -408,49 +241,46 @@
         <div class="col-lg-7">
           <div class="section-heading">
             <h2>Feel free to <em>Contact</em> us about your <span>video project</span></h2>
-            <!-- ADDED PROFESSIONAL CONTEXT TEXT TO BALANCE THE LAYOUT -->
-            <p style="color: #fff; opacity: 0.85; margin-top: 15px; margin-bottom: 25px; line-height: 1.7; max-width: 90%;">
-              <li>Ready to elevate your content? Share your project details, timeline, and goals with us. 
-              Our team reviews every inquiry personally and will respond within 24 hours with a custom quote and workflow plan.</li>
-            </p>
-            <div class="info">
+            <div class="info" style="margin-top: 30px;">
+              <ul style="padding-left: 0; margin: 0; list-style: none;">
+                <li style="color: #7a7a7a; line-height: 1.7;">
+                  Ready to elevate your content? Share your project details, timeline, and goals with us. Our team reviews every inquiry personally and will respond within 24 hours with a custom quote and workflow plan.
+                </li>
+              </ul>
+            </div>
+            <div class="info" style="margin-top: 30px;">
               <span><i class="fa fa-envelope"></i> <a href="mailto:admin@bigbaymall.com">admin@bigbaymall.com</a></span>
             </div>
           </div>
         </div>
         <div class="col-lg-5 align-self-center">
-          <div class="contact-card">
-            <form id="lead-form" action="https://formspree.io/f/mqpaezpr" method="POST">
-              <input type="hidden" name="_next" value="https://bigbaymall.com/">
-              <input type="hidden" name="_subject" value="New Video Editing Lead from BigBay Mall">
-              <div class="row">
-                <div class="col-12">
-                  <fieldset>
-                    <label for="name" class="sr-only">Your Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Full Name" autocomplete="on" required>
-                  </fieldset>
-                </div>
-                <div class="col-12">
-                  <fieldset>
-                    <label for="email" class="sr-only">Your Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email Address" required>
-                  </fieldset>
-                </div>
-                <div class="col-12">
-                  <fieldset>
-                    <label for="message" class="sr-only">Project Details</label>
-                    <textarea id="message" name="message" rows="4" placeholder="Tell us about your video project (e.g., type of video, length, deadline)" required></textarea>
-                  </fieldset>
-                </div>
-                <div class="col-12">
-                  <fieldset>
-                    <!-- APPLIED NATIVE TEMPLATE BUTTON CLASS -->
-                    <button type="submit" class="main-button">Submit Request</button>
-                  </fieldset>
-                </div>
+          <form id="lead-form" action="https://formspree.io/f/mqpaezpr" method="POST">
+            <input type="hidden" name="_next" value="https://bigbaymall.com/">
+            <input type="hidden" name="_subject" value="New Video Editing Lead from BigBay Mall">
+            
+            <div class="row">
+              <div class="col-lg-12">
+                <fieldset>
+                  <input type="text" name="name" placeholder="Your Full Name" autocomplete="on" required>
+                </fieldset>
               </div>
-            </form>
-          </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <input type="email" name="email" placeholder="Your Email Address" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <textarea name="message" rows="4" placeholder="Tell us about your video project (e.g., type of video, length, deadline)" required style="width: 100%; padding: 10px; border-radius: 4px; box-sizing: border-box;"></textarea>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <button type="submit" class="main-button">Submit Request</button>
+                </fieldset>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -467,9 +297,10 @@
             <div class="logo"><a href="#"><img src="assets/images/logo.png" alt="BigBay Mall"></a></div>
             <a href="mailto:admin@bigbaymall.com">admin@bigbaymall.com</a>
             <ul>
-              <li><a href="#" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#" target="_blank" title="TikTok"><i class="fa fa-tiktok"></i></a></li>
-              <li><a href="#" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-behance"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
             </ul>
           </div>
         </div>
