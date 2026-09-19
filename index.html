@@ -25,7 +25,7 @@
 
   <style>
     /* ============================================
-       1. KILL HERO IMAGE DUPLICATION (::before / ::after)
+       1. KILL HERO IMAGE DUPLICATION (::before / ::after ONLY)
        ============================================ */
     .main-banner .right-image::before,
     .main-banner .right-image::after,
@@ -47,14 +47,14 @@
       box-shadow: none !important;
       border: none !important;
     }
-    /* Kill any owl-carousel clones just in case */
-    .owl-carousel .cloned {
-      display: none !important;
-    }
 
     /* ============================================
-       2. MOBILE HERO SPACING
+       2. FIX HEADER PADDING & MOBILE SPACING
        ============================================ */
+    .main-banner {
+      padding-top: 120px !important; /* Clears the sticky header on desktop */
+      padding-bottom: 60px !important;
+    }
     @media (max-width: 991px) {
       .main-banner { padding-top: 100px !important; padding-bottom: 40px !important; }
       .main-banner .item { text-align: center; padding-top: 0 !important; }
@@ -66,33 +66,7 @@
     }
 
     /* ============================================
-       3. SUBMIT BUTTON (Matches Template's Default .main-button)
-       ============================================ */
-    #lead-form button[type="submit"] {
-      display: inline-block;
-      width: 100%;
-      text-align: center;
-      font-size: 14px;
-      font-weight: 500;
-      color: #fff !important;
-      background-color: #ff695f !important;
-      border-radius: 23px;
-      padding: 12px 30px;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      border: none;
-      cursor: pointer;
-      font-family: 'Poppins', sans-serif;
-      margin-top: 10px;
-    }
-    #lead-form button[type="submit"]:hover {
-      background-color: #e05048 !important;
-      color: #fff !important;
-      transform: translateY(-2px);
-    }
-
-    /* ============================================
-       4. CONTACT FORM CARD
+       3. CONTACT FORM CARD
        ============================================ */
     .contact-card {
       background-color: #fff;
@@ -107,7 +81,7 @@
     }
 
     /* ============================================
-       5. FORM INPUTS
+       4. FORM INPUTS
        ============================================ */
     #lead-form input,
     #lead-form textarea {
@@ -141,7 +115,7 @@
     }
 
     /* ============================================
-       6. FOOTER LINKS & EMAIL - GRAY DEFAULT, ORANGE HOVER
+       5. FOOTER LINKS & EMAIL - GRAY DEFAULT, ORANGE HOVER
        ============================================ */
     footer .footer-item ul {
       padding: 0 !important;
@@ -172,7 +146,7 @@
     }
 
     /* ============================================
-       7. SOCIAL ICONS - GRAY DEFAULT, ORANGE HOVER
+       6. SOCIAL ICONS - GRAY DEFAULT, ORANGE HOVER
        ============================================ */
     footer .about.footer-item > ul {
       display: flex !important;
@@ -203,7 +177,7 @@
     }
 
     /* ============================================
-       8. KEEP FORM CLICKABLE + FIX LAPTOP OVERLAP
+       7. KEEP FORM CLICKABLE + FIX LAPTOP OVERLAP
        ============================================ */
     .contact-dec, .contact-left-dec { pointer-events: none !important; z-index: 0 !important; }
     #contact .container { position: relative; z-index: 5; }
@@ -240,7 +214,7 @@
         </div>
       </div>
     </div>
-  </header>
+    </header>
 
   <div class="main-banner" id="top">
     <div class="container">
@@ -434,7 +408,12 @@
         <div class="col-lg-7">
           <div class="section-heading">
             <h2>Feel free to <em>Contact</em> us about your <span>video project</span></h2>
-            <div class="info" style="margin-top: 30px;">
+            <!-- ADDED PROFESSIONAL CONTEXT TEXT TO BALANCE THE LAYOUT -->
+            <p style="color: #fff; opacity: 0.85; margin-top: 15px; margin-bottom: 25px; line-height: 1.7; max-width: 90%;">
+              Ready to elevate your content? Share your project details, timeline, and goals with us. 
+              Our team reviews every inquiry personally and will respond within 24 hours with a custom quote and workflow plan.
+            </p>
+            <div class="info">
               <span><i class="fa fa-envelope"></i> <a href="mailto:admin@bigbaymall.com">admin@bigbaymall.com</a></span>
             </div>
           </div>
@@ -465,7 +444,8 @@
                 </div>
                 <div class="col-12">
                   <fieldset>
-                    <button type="submit">Submit Request</button>
+                    <!-- APPLIED NATIVE TEMPLATE BUTTON CLASS -->
+                    <button type="submit" class="main-button">Submit Request</button>
                   </fieldset>
                 </div>
               </div>
