@@ -17,10 +17,7 @@
 
   <style>
     /* 1. FIX HEADER PADDING & MOBILE SPACING */
-    .main-banner {
-      padding-top: 120px !important;
-      padding-bottom: 60px !important;
-    }
+    .main-banner { padding-top: 120px !important; padding-bottom: 60px !important; }
     @media (max-width: 991px) {
       .main-banner { padding-top: 100px !important; padding-bottom: 40px !important; }
       .main-banner .item h1, .main-banner .item h2 { font-size: 28px !important; line-height: 1.3 !important; }
@@ -32,130 +29,50 @@
       .copyright { text-align: center; margin-top: 20px; }
     }
 
-    /* 2. KILL HERO IMAGE DUPLICATION (::before / ::after ONLY) */
-    .main-banner .right-image::before,
-    .main-banner .right-image::after,
-    .main-banner::before,
-    .main-banner::after {
-      content: none !important;
-      display: none !important;
-      background: none !important;
-      background-image: none !important;
+    /* 2. KILL HERO IMAGE DUPLICATION */
+    .main-banner .right-image::before, .main-banner .right-image::after, .main-banner::before, .main-banner::after {
+      content: none !important; display: none !important; background: none !important; background-image: none !important;
     }
     .main-banner .right-image img {
-      display: block !important;
-      position: relative !important;
-      z-index: 10 !important;
-      max-width: 100% !important;
-      height: auto !important;
+      display: block !important; position: relative !important; z-index: 10 !important;
+      max-width: 100% !important; height: auto !important;
     }
 
     /* 3. FOOTER LINKS & EMAIL - GRAY DEFAULT, ORANGE HOVER */
-    footer .footer-item ul {
-      padding: 0 !important;
-      margin-top: 15px !important;
-      list-style: none !important;
+    footer .footer-item ul { padding: 0 !important; margin-top: 15px !important; list-style: none !important; }
+    footer .footer-item ul li { margin-bottom: 12px !important; display: block !important; }
+    footer .footer-item ul li a, footer .about.footer-item > a {
+      color: #7a7a7a !important; text-decoration: none !important; font-size: 14px !important;
+      opacity: 1 !important; visibility: visible !important; display: inline-block !important; transition: color 0.3s ease !important;
     }
-    footer .footer-item ul li {
-      margin-bottom: 12px !important;
-      display: block !important;
-    }
-    footer .footer-item ul li a,
-    footer .about.footer-item > a {
-      color: #7a7a7a !important;
-      text-decoration: none !important;
-      font-size: 14px !important;
-      opacity: 1 !important;
-      visibility: visible !important;
-      display: inline-block !important;
-      transition: color 0.3s ease !important;
-    }
-    footer .footer-item ul li a:hover,
-    footer .about.footer-item > a:hover {
-      color: #ff695f !important;
-    }
-    footer .about.footer-item > a {
-      display: block !important;
-      margin-bottom: 15px !important;
-    }
+    footer .footer-item ul li a:hover, footer .about.footer-item > a:hover { color: #ff695f !important; }
+    footer .about.footer-item > a { display: block !important; margin-bottom: 15px !important; }
 
     /* 4. SOCIAL ICONS - GRAY DEFAULT, ORANGE HOVER */
-    footer .about.footer-item > ul {
-      display: flex !important;
-      flex-direction: row !important;
-      gap: 12px !important;
-      padding: 0 !important;
-      margin-top: 10px !important;
-    }
-    footer .about.footer-item > ul li {
-      margin-bottom: 0 !important;
-      display: inline-block !important;
-    }
+    footer .about.footer-item > ul { display: flex !important; flex-direction: row !important; gap: 12px !important; padding: 0 !important; margin-top: 10px !important; }
+    footer .about.footer-item > ul li { margin-bottom: 0 !important; display: inline-block !important; }
     footer .about.footer-item > ul li a {
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      width: 38px !important;
-      height: 38px !important;
-      background-color: rgba(122, 122, 122, 0.1) !important;
-      border-radius: 50% !important;
-      color: #7a7a7a !important;
-      font-size: 16px !important;
-      transition: all 0.3s ease !important;
+      display: flex !important; align-items: center !important; justify-content: center !important;
+      width: 38px !important; height: 38px !important; background-color: rgba(122, 122, 122, 0.1) !important;
+      border-radius: 50% !important; color: #7a7a7a !important; font-size: 16px !important; transition: all 0.3s ease !important;
     }
-    footer .about.footer-item > ul li a:hover {
-      background-color: #ff695f !important;
-      color: #fff !important;
-    }
+    footer .about.footer-item > ul li a:hover { background-color: #ff695f !important; color: #fff !important; }
 
     /* 5. CONTACT FORM STYLING & BUTTON MATCH */
-    #lead-form input,
-    #lead-form textarea {
-      width: 100%;
-      height: 46px;
-      background-color: #f8f9fa;
-      border: 1px solid #e0e0e0;
-      border-radius: 23px;
-      padding: 0 20px;
-      font-size: 14px;
-      color: #333;
-      margin-bottom: 20px;
-      outline: none;
-      font-family: 'Poppins', sans-serif;
-      box-sizing: border-box;
+    #lead-form input, #lead-form textarea {
+      width: 100%; height: 46px; background-color: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 23px;
+      padding: 0 20px; font-size: 14px; color: #333; margin-bottom: 20px; outline: none; font-family: 'Poppins', sans-serif; box-sizing: border-box;
     }
-    #lead-form textarea {
-      height: 130px;
-      padding: 15px 20px;
-      resize: none;
-    }
-    #lead-form input:focus,
-    #lead-form textarea:focus {
-      border-color: #ff695f;
-      background-color: #fff;
-      box-shadow: 0 0 5px rgba(255, 105, 95, 0.3);
-    }
-    /* Force the submit button to match the theme's primary button exactly */
+    #lead-form textarea { height: 130px; padding: 15px 20px; resize: none; }
+    #lead-form input:focus, #lead-form textarea:focus { border-color: #ff695f; background-color: #fff; box-shadow: 0 0 5px rgba(255, 105, 95, 0.3); }
+    
     #lead-form button.main-button {
-      background-color: #ff695f !important;
-      color: #fff !important;
-      font-size: 14px !important;
-      font-weight: 500 !important;
-      padding: 12px 30px !important;
-      border-radius: 23px !important;
-      display: inline-block !important;
-      text-align: center !important;
-      border: none !important;
-      outline: none !important;
-      text-decoration: none !important;
-      transition: all .3s !important;
-      width: 100% !important;
-      cursor: pointer !important;
+      background-color: #ff695f !important; color: #fff !important; font-size: 14px !important; font-weight: 500 !important;
+      padding: 12px 30px !important; border-radius: 23px !important; display: inline-block !important; text-align: center !important;
+      border: none !important; outline: none !important; text-decoration: none !important; transition: all .3s !important;
+      width: 100% !important; cursor: pointer !important;
     }
-    #lead-form button.main-button:hover {
-      background-color: #e05048 !important;
-      color: #fff !important;
-    }
+    #lead-form button.main-button:hover { background-color: #e05048 !important; color: #fff !important; }
 
     /* 6. KEEP DECORATIVE IMAGES FROM BLOCKING FORM */
     .contact-dec, .contact-left-dec { pointer-events: none !important; z-index: 0 !important; }
@@ -163,9 +80,6 @@
   </style>
 </head>
 <body>
-  <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner"><span class="dot"></span><div class="dots"><span></span><span></span><span></span></div></div>
-  </div>
 
   <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
     <div class="container">
@@ -221,7 +135,6 @@
                 </div>
               </div>
             </div>
-            <!-- RESTORED RIGHT IMAGE (CSS PREVENTS DUPLICATION) -->
             <div class="col-lg-6 align-self-center">
               <div class="right-image">
                 <img src="assets/images/banner-right-image.png" alt="BigBay Mall Video Editing Services">
@@ -381,7 +294,6 @@
         <div class="col-lg-7">
           <div class="section-heading">
             <h2>Feel free to <em>Contact</em> us about your <span>video project</span></h2>
-            <!-- CLEANED UP PROFESSIONAL TEXT -->
             <div class="info" style="margin-top: 30px;">
               <p style="color: #fff; opacity: 0.85; margin-bottom: 25px; line-height: 1.7; max-width: 90%;">
                 Ready to elevate your content? Share your project details, timeline, and goals with us. Our team reviews every inquiry personally and will respond within 24 hours with a custom quote and workflow plan.
@@ -394,28 +306,11 @@
           <form id="lead-form" action="https://formspree.io/f/mqpaezpr" method="POST">
             <input type="hidden" name="_next" value="https://bigbaymall.com/">
             <input type="hidden" name="_subject" value="New Video Editing Lead from BigBay Mall">
-            
             <div class="row">
-              <div class="col-lg-12">
-                <fieldset>
-                  <input type="text" name="name" placeholder="Your Full Name" autocomplete="on" required>
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <input type="email" name="email" placeholder="Your Email Address" required>
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <textarea name="message" rows="4" placeholder="Tell us about your video project (e.g., type of video, length, deadline)" required></textarea>
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <button type="submit" class="main-button">Submit Request</button>
-                </fieldset>
-              </div>
+              <div class="col-lg-12"><fieldset><input type="text" name="name" placeholder="Your Full Name" autocomplete="on" required></fieldset></div>
+              <div class="col-lg-12"><fieldset><input type="email" name="email" placeholder="Your Email Address" required></fieldset></div>
+              <div class="col-lg-12"><fieldset><textarea name="message" rows="4" placeholder="Tell us about your video project (e.g., type of video, length, deadline)" required></textarea></fieldset></div>
+              <div class="col-lg-12"><fieldset><button type="submit" class="main-button">Submit Request</button></fieldset></div>
             </div>
           </form>
         </div>
