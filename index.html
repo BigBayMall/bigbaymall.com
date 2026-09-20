@@ -68,7 +68,7 @@
       font-size: 14px !important;
       font-weight: 500 !important;
       color: #ffffff !important;
-      background-color: #ff695f !important; /* Exact coral color */
+      background-color: #ff695f !important;
       border: none !important;
       border-radius: 23px !important;
       padding: 12px 30px !important;
@@ -79,7 +79,7 @@
       margin-top: 10px !important;
     }
     #lead-form button[type="submit"]:hover {
-      background-color: #e05048 !important; /* Exact darker coral hover */
+      background-color: #e05048 !important;
       color: #ffffff !important;
       transform: translateY(-2px) !important;
       box-shadow: 0 5px 15px rgba(255, 105, 95, 0.4) !important;
@@ -187,6 +187,11 @@
       background-color: #ff695f !important;
       color: #fff !important;
     }
+    /* Ensure SVG inside social icons inherits the color */
+    footer .about.footer-item > ul li a svg {
+      fill: currentColor !important;
+      transition: fill 0.3s ease !important;
+    }
 
     /* 8. KEEP FORM CLICKABLE + FIX LAPTOP OVERLAP */
     .contact-dec, .contact-left-dec { pointer-events: none !important; z-index: 0 !important; }
@@ -235,7 +240,7 @@
               <div class="owl-carousel owl-banner">
                 <div class="item header-text">
                   <h6>Welcome to BigBay Mall</h6>
-                  <h2>Professional <em>video Editing</em> Service & <span>Color Grading</span></h2>
+                  <h2>Professional <em>Video Editing</em> Service & <span>Color Grading</span></h2>
                   <p>High-quality video editing, color grading, and custom templates for creators, businesses, and brands. Fast turnaround, professional results.</p>
                   <div class="down-buttons">
                     <div class="main-blue-button-hover"><a href="#contact">Contact Us Now</a></div>
@@ -477,7 +482,14 @@
             <a href="mailto:admin@bigbaymall.com">admin@bigbaymall.com</a>
             <ul>
               <li><a href="#" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#" target="_blank" title="TikTok"><i class="fa fa-tiktok"></i></a></li>
+              <li>
+                <a href="#" target="_blank" title="TikTok">
+                  <!-- Inline SVG guarantees the TikTok logo renders perfectly without relying on outdated CSS files -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 448 512" fill="currentColor" style="display: block;">
+                    <path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/>
+                  </svg>
+                </a>
+              </li>
               <li><a href="#" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></li>
             </ul>
           </div>
